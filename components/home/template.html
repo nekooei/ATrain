@@ -1,0 +1,31 @@
+<div ng-controller="homeController" ng-init="check()">
+    <h1>username : {{username}}</h1>
+    <h3>"List of friends"</h3>
+    <table style="border:1px solid black;">
+        <th>id</th>
+        <th>first name</th>
+        <th>last name</th>
+        <tr ng-repeat="friend in friends">
+            <td>{{friend.id}}</td>
+            <td>{{friend.firstName}}</td>
+            <td>{{friend.lastName}}</td>
+        </tr>
+    </table>
+    <button type="button" ng-click="logout()">logout</button>
+</div>
+<hr>
+<div ng-controller="personController" ng-init="loadData()">
+    <h2 style="color:blue;">search for new friends</h2>
+    <input type="text" placeholder="filter" ng-model="pattern">
+    <table style="border:2px solid gray">
+        <th>first name</th>
+        <th>last name</th>
+        <th>action</th>
+
+        <tr ng-repeat="person in persons | filter:pattern">
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+            <td><button type="button" ng-click="add(person.id)">add</button></td>
+        </tr>
+    </table>
+</div>

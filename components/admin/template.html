@@ -1,0 +1,26 @@
+<div ng-controller="adminController" ng-init="check()">
+    <h4>insert new person</h4>
+    <table>
+        <tr style="background-color:gray;">
+            <td>{{nextId}}</td>
+            <td>
+                <input type="text" placeholder="first name" ng-model="firstName">
+            </td>
+            <td>
+                <input type="text" placeholder="last name" ng-model="lastName">
+            </td>
+            <td>
+                <button type="button" ng-click="add(firstName,lastName)">add</button>
+            </td>
+        </tr>
+        <tr ng-repeat="person in persons">
+            <td>{{person.id}}</td>
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <button type="button" ng-click="logout()">logout</button>
+
+</div>

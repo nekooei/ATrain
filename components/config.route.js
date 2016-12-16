@@ -1,0 +1,15 @@
+myApplication.config(function($routeProvider){
+  $routeProvider
+  .when('/',{
+      templateUrl:'./components/authentication/template.html',
+      controller:'authController'
+  })
+  .when('/home',{
+      templateUrl:'./components/home/template.html',
+      controller:'homeController'
+  })
+  .when('/admin',{
+      templateUrl:'./components/admin/template.html',
+      controller:'adminController'
+  });
+});

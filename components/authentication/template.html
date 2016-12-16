@@ -1,0 +1,11 @@
+<div ng-controller="authController">
+    <h3 style="color:red">{{message}}</h3>
+    <form>
+        <input type="text" name="username"
+            placeholder="username" ng-model="username">
+        <input type="password" name="password"
+            placeholder="password" ng-model="password">
+        <button type="button" name="login"
+            ng-click="doLogin(username.trim(),password.trim())">login</button>
+    </form>
+</div>
