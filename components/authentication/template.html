@@ -1,5 +1,4 @@
-<div ng-controller="authController">
-    <h3 style="color:red">{{message}}</h3>
+<div class="container" ng-controller="authController">
     <form>
         <input type="text" name="username"
             placeholder="username" ng-model="username">
@@ -8,4 +7,5 @@
         <button type="button" name="login"
             ng-click="doLogin(username.trim(),password.trim())">login</button>
     </form>
+    <h3 ng-show="showError" style="color:#b92c28">{{message}}</h3>
 </div>

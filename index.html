@@ -2,17 +2,20 @@
 <html>
     <head>
       <meta charset="utf-8">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
         <title>Train Angular</title>
     </head>
 
-    <body ng-app="myApp">
+    <body ng-app="myApp" style="background-color: seagreen;">
         <div ng-view>
 
         </div>
 
 
-        <script src="./lib/angular.min.js"> </script>
-        <script src="./lib/angular-route.min.js"></script>
+        <script src="./node_modules/angular/angular.js"> </script>
+        <script src="./node_modules/angular-route/angular-route.js"></script>
+        <script src="./node_modules/angular-animate/angular-animate.js"></script>
+        <script src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
         <script src="./lib/app.js"> </script>
         <script src="./components/config.route.js"></script>
         <script src="./components/authentication/service.js"></script>

@@ -27,7 +27,7 @@ myApplication.factory('personService',function () {
         return undefined;
     };
 
-    var getlastId = function () {
+    var getLastId = function () {
         return lastId;
     };
 
@@ -35,6 +35,6 @@ myApplication.factory('personService',function () {
         persons : persons,
         addPerson : addPerson,
         getPersonById : getById,
-        getlastId : getlastId
+        getLastId : getLastId
     };
 });
